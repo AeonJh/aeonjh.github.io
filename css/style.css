@@ -1493,10 +1493,6 @@ body {
   padding-left: 0.5em;
   margin: 0;
 }
-.nexmoe-toc > ol {
-  margin: 0;
-  padding: 0;
-}
 .nexmoe-toc * {
   list-style: none;
 }
