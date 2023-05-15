@@ -1490,7 +1490,7 @@ body {
   margin: 0;
 }
 .nexmoe-toc li {
-  padding: 0.5rem 0;
+  padding-left: 0.5em;
   margin: 0;
 }
 .nexmoe-toc > ol {
