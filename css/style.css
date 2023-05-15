@@ -1490,12 +1490,13 @@ body {
   margin: 0;
 }
 .nexmoe-toc li {
+  padding: 0.5rem 0;
   margin: 0;
 }
 .nexmoe-toc > ol {
   margin: 0;
   padding: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
   max-height: calc(100vh - 155px);
   padding: 20px;
 }
