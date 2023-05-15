@@ -1488,9 +1488,6 @@ body {
 .nexmoe-toc ol {
   padding-left: 1em;
   margin: 0;
-  overflow-y: scroll;
-  max-height: calc(100vh - 155px);
-  padding: 20px;
 }
 .nexmoe-toc li {
   padding-left: 0.5em;
