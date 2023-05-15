@@ -1485,13 +1485,15 @@ body {
   background-color: var(--color-primary);
   box-shadow: 0 1px 10px var(--color-primary);
 }
-.nexmoe-toc ol {
-  padding-left: 1em;
+.nexmoe-toc li {
   margin: 0;
 }
-.nexmoe-toc li {
-  padding-left: 0.5em;
+.nexmoe-toc > ol {
   margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  max-height: calc(100vh - 155px);
+  padding: 20px;
 }
 .nexmoe-toc * {
   list-style: none;
