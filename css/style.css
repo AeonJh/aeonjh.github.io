@@ -1455,6 +1455,8 @@ body {
 }
 .nexmoe-toc {
   text-transform: none;
+  overflow-y: auto;
+  max-height: calc(100svh - 155px);
   width: 420px;
   max-width: calc(100vw - 40px);
   white-space: normal;
@@ -1484,8 +1486,6 @@ body {
   box-shadow: 0 1px 10px var(--color-primary);
 }
 .nexmoe-toc ol {
-  overflow-y: scroll;
-  max-height: calc(100vh - 155px);
   padding-left: 1em;
   margin: 0;
 }
@@ -1495,7 +1495,6 @@ body {
 .nexmoe-toc > ol {
   margin: 0;
   padding: 0;
-  padding: 20px;
 }
 .nexmoe-toc * {
   list-style: none;
