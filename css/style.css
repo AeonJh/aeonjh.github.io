@@ -1468,6 +1468,7 @@ body {
   font-size: 16px;
   display: none;
   overflow-y: scroll;
+  max-height: calc(100vh - 155px);
 }
 .nexmoe-tool .catalog:hover .nexmoe-toc {
   display: block;
@@ -1494,7 +1495,6 @@ body {
 .nexmoe-toc > ol {
   margin: 0;
   padding: 0;
-  max-height: calc(100vh - 155px);
   padding: 20px;
 }
 .nexmoe-toc * {
