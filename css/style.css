@@ -1494,7 +1494,7 @@ body {
 }
 .nexmoe-toc > ol {
   margin: 0;
-  padding: 20px;
+  padding: 0;
 }
 .nexmoe-toc * {
   list-style: none;
