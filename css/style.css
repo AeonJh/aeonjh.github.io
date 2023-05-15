@@ -1455,6 +1455,8 @@ body {
 }
 .nexmoe-toc {
   text-transform: none;
+  overflow-y: auto;
+  max-height: calc(100vh - 80px);
   width: 420px;
   max-width: calc(100vw - 40px);
   white-space: normal;
