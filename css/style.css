@@ -1486,7 +1486,6 @@ body {
   box-shadow: 0 1px 10px var(--color-primary);
 }
 .nexmoe-toc ol {
-  padding-left: 1em;
   margin: 0;
 }
 .nexmoe-toc li {
@@ -1495,7 +1494,6 @@ body {
 .nexmoe-toc > ol {
   margin: 0;
   padding: 0;
-  padding: 20px;
 }
 .nexmoe-toc * {
   list-style: none;
