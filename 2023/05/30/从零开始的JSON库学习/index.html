@@ -10,12 +10,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="从零开始的JSON库学习 本文章主要记录一下学习叶劲峰老师的开源JSON库leptjsonmiloyip&#x2F;json-tutorial: 从零开始的 JSON 库教程的过程及总结。本文中只给出部分代码示例，完整源代码请到lept_study查看。  一、JSON介绍、相关开发手段及理念JSON（JavaScript Object Notation）是一个用于数据交换的文本格式，例如： &amp;#1">
+    <meta name="description" content="从零开始的JSON库学习 本文章主要记录一下学习叶劲峰老师的开源JSON库leptjsonmiloyip&#x2F;json-tutorial: 从零开始的 JSON 库教程的过程及总结。本文中只给出部分代码示例，完整源代码请到lept_study查看。  一、JSON介绍、相关开发手段及理念JSON（JavaScript Object Notation）是一个用于数据交换的文本格式，例如： {     &quot;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始的JSON库学习">
 <meta property="og:url" content="https://aeonjh.top/2023/05/30/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84JSON%E5%BA%93%E5%AD%A6%E4%B9%A0/">
 <meta property="og:site_name" content="AeonJh’s Blog">
-<meta property="og:description" content="从零开始的JSON库学习 本文章主要记录一下学习叶劲峰老师的开源JSON库leptjsonmiloyip&#x2F;json-tutorial: 从零开始的 JSON 库教程的过程及总结。本文中只给出部分代码示例，完整源代码请到lept_study查看。  一、JSON介绍、相关开发手段及理念JSON（JavaScript Object Notation）是一个用于数据交换的文本格式，例如： &amp;#1">
+<meta property="og:description" content="从零开始的JSON库学习 本文章主要记录一下学习叶劲峰老师的开源JSON库leptjsonmiloyip&#x2F;json-tutorial: 从零开始的 JSON 库教程的过程及总结。本文中只给出部分代码示例，完整源代码请到lept_study查看。  一、JSON介绍、相关开发手段及理念JSON（JavaScript Object Notation）是一个用于数据交换的文本格式，例如： {     &quot;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic2.zhimg.com/75eecb0312e129d64dd3b028e1479e3d_r.jpg">
 <meta property="og:image" content="https://s2.loli.net/2023/05/29/1wYZepPNvsAR7Oi.jpg">
@@ -33,13 +33,13 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685446098627">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685446376861">
     
-    <link rel="stylesheet" href="/css/style.css?v=1685446098627">
+    <link rel="stylesheet" href="/css/style.css?v=1685446376861">
 
     
         
-            <link rel="stylesheet" href="/custom.css?v=1685446098627">
+            <link rel="stylesheet" href="/custom.css?v=1685446376862">
         
     
 
@@ -48,12 +48,12 @@
 <script src="/lib/fancybox/fancybox.umd.js" async></script>
 
 
-    <script async src="/js/app.js?v=1685446098627"></script>
+    <script async src="/js/app.js?v=1685446376862"></script>
     
      
 
     
-<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 6.3.0"><link rel="stylesheet" href="/css/prism-dark.css" type="text/css"></head>
 
 <body class="mdui-drawer-body-left">
     <div id="nexmoe-background">
@@ -305,8 +305,8 @@
             <a class="nexmoefont icon-appstore-fill -link" href="/categories/study/">study</a>
         
         
-    <a><i class="nexmoefont icon-areachart"></i>约4.2k字</a>
-    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要19分钟</a>
+    <a><i class="nexmoefont icon-areachart"></i>约4k字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要18分钟</a>
 
     </div>
     
@@ -320,7 +320,7 @@
 <p>本文章主要记录一下学习叶劲峰老师的开源<code>JSON</code>库<code>leptjson</code><a target="_blank" rel="noopener" href="https://github.com/miloyip/json-tutorial"><code>miloyip/json-tutorial</code>: 从零开始的 <code>JSON</code> 库教程</a>的过程及总结。本文中只给出部分代码示例，完整源代码请到<a target="_blank" rel="noopener" href="https://github.com/AeonJh/lept_study"><code>lept_study</code></a>查看。</p>
 </blockquote>
 <h2 id="一、JSON介绍、相关开发手段及理念"><a href="#一、JSON介绍、相关开发手段及理念" class="headerlink" title="一、JSON介绍、相关开发手段及理念"></a>一、JSON介绍、相关开发手段及理念</h2><p><code>JSON（JavaScript Object Notation）</code>是一个用于数据交换的文本格式，例如：</p>
-<pre class=" language-json"><code class="language-json">&amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
     <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"Design Patterns"</span><span class="token punctuation">,</span>
     <span class="token property">"subtitle"</span><span class="token operator">:</span> <span class="token string">"Elements of Reusable Object-Oriented Software"</span><span class="token punctuation">,</span>
     <span class="token property">"author"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
@@ -332,12 +332,12 @@
     <span class="token property">"year"</span><span class="token operator">:</span> <span class="token number">2009</span><span class="token punctuation">,</span>
     <span class="token property">"weight"</span><span class="token operator">:</span> <span class="token number">1.8</span><span class="token punctuation">,</span>
     <span class="token property">"hardcover"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-    <span class="token property">"publisher"</span><span class="token operator">:</span> &amp;#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token property">"publisher"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
         <span class="token property">"Company"</span><span class="token operator">:</span> <span class="token string">"Pearson Education"</span><span class="token punctuation">,</span>
         <span class="token property">"Country"</span><span class="token operator">:</span> <span class="token string">"India"</span>
-    &amp;#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
     <span class="token property">"website"</span><span class="token operator">:</span> <span class="token null">null</span>
-&amp;#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>可以看出，<code>JSON</code>是树状结构，而<code>JSON</code>只包含 6 种数据类型：</p>
 <ul>
@@ -391,9 +391,9 @@
     value = object
         object = %x7B ws [ member *( ws %x2C ws member ) ] ws %x7D
         member = string ws %x3A ws value
-        %x7B = &#123;
+        %x7B = {
         %x3A = :
-        %x7D = &#125;
+        %x7D = }
 </code></pre>
 <h3 id="1-2-单元测试"><a href="#1-2-单元测试" class="headerlink" title="1.2 单元测试"></a>1.2 单元测试</h3><p>测试驱动开发（<code>Test-Driven Development，TDD</code>）是一种软件开发方法论，它要求在编写代码之前先编写测试用例，然后编写代码以使这些测试用例能够通过。</p>
 <p><strong>测试驱动开发的实施过程：</strong></p>
@@ -407,7 +407,7 @@
 </ol>
 <h3 id="1-3-宏的编写技巧"><a href="#1-3-宏的编写技巧" class="headerlink" title="1.3 宏的编写技巧"></a>1.3 宏的编写技巧</h3><p>反斜线代表该行未结束，会串接下一行。而如果宏里有多过一个语句（<code>statement</code>），就需要用<code>do &#123; /**...**/ &#125; while(0)</code>包裹成单个语句。</p>
 <pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> M()\
-        do &amp;#123; a(); b(); &amp;#125;\
+        do { a(); b(); }\
         while(0)</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span>cond<span class="token punctuation">)</span>
@@ -418,7 +418,7 @@
 <span class="token comment" spellcheck="true">/* 预处理后 */</span>
 
 <span class="token keyword">if</span> <span class="token punctuation">(</span>cond<span class="token punctuation">)</span>
-    <span class="token keyword">do</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">do</span> <span class="token punctuation">{</span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token punctuation">}</span> <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">else</span>
     <span class="token function">c</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
@@ -445,45 +445,45 @@ target_compile_options(leptjson_test PRIVATE -gdwarf-4)
 <hr>
 <h2 id="二、数据结构"><a href="#二、数据结构" class="headerlink" title="二、数据结构"></a>二、数据结构</h2><p>在本次开发中共涉及两个主要步骤，一是解析传入的<code>json</code>文本为树形数据结构，二是生成相应的<code>json</code>文本，因此采用结构体类型存储过程值与结果值，同时定义相关的类型值与状态值（<code>enum</code>类型有利于更直观的表达相应的类型与状态）：<code>typedef enum &#123; ··· &#125; lept_type;</code>、<code>enum &#123; LEPT_PARSE_OK = 0&#125;</code>。</p>
 <p>存储解析得到的值用结构体<code>lept_value</code>表示（各数据类型都已作相关说明）：</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">struct</span> lept_value <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">struct</span> lept_value <span class="token punctuation">{</span>
 <span class="token comment" spellcheck="true">/* union: a variable that can be used to store different types of data at
 different times Anonymous unions are a C11 extension. */</span>
-    <span class="token keyword">union</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">union</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">/* string */</span> <span class="token comment" spellcheck="true">/* s: string */</span> <span class="token comment" spellcheck="true">/* len: string's length */</span>
-        <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> <span class="token keyword">char</span><span class="token operator">*</span> s<span class="token punctuation">;</span> size_t len<span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>s<span class="token punctuation">;</span>
+        <span class="token keyword">struct</span> <span class="token punctuation">{</span> <span class="token keyword">char</span><span class="token operator">*</span> s<span class="token punctuation">;</span> size_t len<span class="token punctuation">;</span> <span class="token punctuation">}</span>s<span class="token punctuation">;</span>
 
         <span class="token comment" spellcheck="true">/* array */</span> <span class="token comment" spellcheck="true">/* e: element */</span> <span class="token comment" spellcheck="true">/* size: array's size */</span> <span class="token comment" spellcheck="true">/* capacity: array's capacity */</span>
         <span class="token comment" spellcheck="true">/* array: dynamic array */</span>
         <span class="token comment" spellcheck="true">/* The capacity is added here to better support operations on arrays, such as: add or delete elements */</span>
         <span class="token comment" spellcheck="true">/* The capacity is the size of the array, and the size is the number of elements in the array. */</span>
-        <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> lept_value<span class="token operator">*</span> e<span class="token punctuation">;</span> size_t size<span class="token punctuation">,</span> capacity<span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>a<span class="token punctuation">;</span>
+        <span class="token keyword">struct</span> <span class="token punctuation">{</span> lept_value<span class="token operator">*</span> e<span class="token punctuation">;</span> size_t size<span class="token punctuation">,</span> capacity<span class="token punctuation">;</span> <span class="token punctuation">}</span>a<span class="token punctuation">;</span>
 
         <span class="token comment" spellcheck="true">/* object */</span> <span class="token comment" spellcheck="true">/* m: member */</span> <span class="token comment" spellcheck="true">/* size: object's size */</span> <span class="token comment" spellcheck="true">/* capacity: object's capacity */</span>
         <span class="token comment" spellcheck="true">/* object: dynamic array */</span>
-        <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> lept_member<span class="token operator">*</span> m<span class="token punctuation">;</span> size_t size<span class="token punctuation">,</span> capacity<span class="token punctuation">;</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>o<span class="token punctuation">;</span>
+        <span class="token keyword">struct</span> <span class="token punctuation">{</span> lept_member<span class="token operator">*</span> m<span class="token punctuation">;</span> size_t size<span class="token punctuation">,</span> capacity<span class="token punctuation">;</span> <span class="token punctuation">}</span>o<span class="token punctuation">;</span>
 
         <span class="token keyword">double</span> n<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* number */</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
     lept_type type<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* value type */</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token keyword">struct</span> lept_member <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">struct</span> lept_member <span class="token punctuation">{</span>
     <span class="token keyword">char</span><span class="token operator">*</span> k<span class="token punctuation">;</span> size_t klen<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* member key string, key string's length */</span>
     lept_value v<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* member value */</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
 </code></pre>
 <p>在解析和生成<code>json</code>文本的过程中，需要将输入输出数据存储到临时的缓冲区，以提高性能和简化实现。由于在解析过程中，这个缓冲区的大小是不能预知的。因此，我们可以采用动态数组（<code>dynamic array</code>）来实现：</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> json<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* input output buffers (dynamic stack) */</span>
     <span class="token keyword">char</span><span class="token operator">*</span> stack<span class="token punctuation">;</span>
     size_t size<span class="token punctuation">,</span> top<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> lept_context<span class="token punctuation">;</span>
+<span class="token punctuation">}</span> lept_context<span class="token punctuation">;</span>
 </code></pre>
 <p>当中<code>size</code>是当前的堆栈容量，<code>top</code>是栈顶的位置（由于<code>stack</code>是可拓展的，所以不要用指针形式存储<code>top</code>）。</p>
 <hr>
 <h2 id="三、解析"><a href="#三、解析" class="headerlink" title="三、解析"></a>三、解析</h2><h3 id="3-1-主要解析步骤"><a href="#3-1-主要解析步骤" class="headerlink" title="3.1 主要解析步骤"></a>3.1 主要解析步骤</h3><p>对于解析部分，我们采用<code>lept_parse()</code>函数实现：</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">lept_parse</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> v<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> json<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token function">lept_parse</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> v<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     lept_context c<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* can be used to check the parse result */</span>
     <span class="token keyword">int</span> ret<span class="token punctuation">;</span>
@@ -497,100 +497,100 @@ different times Anonymous unions are a C11 extension. */</span>
     <span class="token comment" spellcheck="true">/* parse whitespace */</span>
     <span class="token function">lept_parse_whitespace</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* parse the first character */</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ret <span class="token operator">=</span> <span class="token function">lept_parse_value</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>c<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> LEPT_PARSE_OK<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ret <span class="token operator">=</span> <span class="token function">lept_parse_value</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>c<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> LEPT_PARSE_OK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">/* parse the next character */</span>
         <span class="token function">lept_parse_whitespace</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>c<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token comment" spellcheck="true">/* if the next character is not '\0', then the json string is not over */</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>c<span class="token punctuation">.</span>json <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">*</span>c<span class="token punctuation">.</span>json <span class="token operator">!=</span> <span class="token string">'\0'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             v<span class="token operator">-></span>type <span class="token operator">=</span> LEPT_NULL<span class="token punctuation">;</span>
             ret <span class="token operator">=</span> LEPT_PARSE_ROOT_NOT_SINGULAR<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">/* free the memory of lept_context */</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span>top <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">free</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span>stack<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>我们根据<code>JSON</code>语法格式<code>JSON-text: ws value ws</code>处理传入的<code>json</code>文本，注意对相应的变量（尤其是指针）做好初始化及释放工作。由上述函数可见，我们采用<code>lept_parse_value()</code>对缓冲区的数据进行解析，源代码如下：</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">lept_parse_value</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token operator">*</span>c<span class="token operator">-></span>json<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">lept_parse_value</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token operator">*</span>c<span class="token operator">-></span>json<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">case</span> <span class="token string">'n'</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token function">lept_parse_literal</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">,</span> <span class="token string">"null"</span><span class="token punctuation">,</span> LEPT_NULL<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> <span class="token string">'f'</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token function">lept_parse_literal</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">,</span> <span class="token string">"false"</span><span class="token punctuation">,</span> LEPT_FALSE<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> <span class="token string">'t'</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token function">lept_parse_literal</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">,</span> <span class="token string">"true"</span><span class="token punctuation">,</span> LEPT_TRUE<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> <span class="token string">'"'</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token function">lept_parse_string</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> <span class="token string">'['</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token function">lept_parse_array</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">case</span> <span class="token string">'&amp;#123;'</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token function">lept_parse_object</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">case</span> <span class="token string">'{'</span><span class="token punctuation">:</span>  <span class="token keyword">return</span> <span class="token function">lept_parse_object</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> <span class="token string">'\0'</span><span class="token punctuation">:</span> <span class="token keyword">return</span> LEPT_PARSE_EXPECT_VALUE<span class="token punctuation">;</span>
         <span class="token keyword">default</span><span class="token punctuation">:</span>   <span class="token keyword">return</span> <span class="token function">lept_parse_number</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <h3 id="3-2-相关函数拆解"><a href="#3-2-相关函数拆解" class="headerlink" title="3.2 相关函数拆解"></a>3.2 相关函数拆解</h3><p>我们选取其中解析字符串的函数<code>lept_parse_string()</code>进行介绍。</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">lept_parse_string</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">lept_parse_string</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> ret<span class="token punctuation">;</span>
     <span class="token keyword">char</span><span class="token operator">*</span> s<span class="token punctuation">;</span>
     size_t len<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* parse string */</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ret <span class="token operator">=</span> <span class="token function">lept_parse_string_raw</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token operator">&amp;</span>s<span class="token punctuation">,</span> <span class="token operator">&amp;</span>len<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> LEPT_PARSE_OK<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>ret <span class="token operator">=</span> <span class="token function">lept_parse_string_raw</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token operator">&amp;</span>s<span class="token punctuation">,</span> <span class="token operator">&amp;</span>len<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> LEPT_PARSE_OK<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">lept_set_string</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> s<span class="token punctuation">,</span> len<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>因为在后续对<code>object</code>类型解析的过程中，<code>object</code>的<code>key</code>属性为<code>string</code>类型，我们可以选择重构原来的字符串类型解析函数，提取出<code>lept_parse_string_raw()</code>函数，使得它既可以被字符串类型解析调用，又可以被<code>object</code>解析<code>key</code>时调用。</p>
 <p>在解析字符串值时，最需要注意的便是对转义字符的处理，我们采用之前提到的缓冲区（采用<code>dynamic array</code>实现）来解决此问题。为了更好的实现对缓冲区的操作，我们实现堆栈的压入及弹出操作：</p>
 <pre class=" language-c"><code class="language-c"><span class="token comment" spellcheck="true">/* return the memory address of the top of the stack */</span>
-<span class="token keyword">static</span> <span class="token keyword">void</span><span class="token operator">*</span> <span class="token function">lept_context_push</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> size_t size<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">static</span> <span class="token keyword">void</span><span class="token operator">*</span> <span class="token function">lept_context_push</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> size_t size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">/* check the stack size */</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>size <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">void</span><span class="token operator">*</span> ret<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* check the stack size */</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token operator">-></span>top <span class="token operator">+</span> size <span class="token operator">>=</span> c<span class="token operator">-></span>size<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token operator">-></span>top <span class="token operator">+</span> size <span class="token operator">>=</span> c<span class="token operator">-></span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">/* double the stack size */</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token operator">-></span>size <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>c<span class="token operator">-></span>size <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
             c<span class="token operator">-></span>size <span class="token operator">=</span> LEPT_PARSE_STACK_INIT_SIZE<span class="token punctuation">;</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-        <span class="token keyword">while</span> <span class="token punctuation">(</span>c<span class="token operator">-></span>top <span class="token operator">+</span> size <span class="token operator">>=</span> c<span class="token operator">-></span>size<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>c<span class="token operator">-></span>top <span class="token operator">+</span> size <span class="token operator">>=</span> c<span class="token operator">-></span>size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
             c<span class="token operator">-></span>size <span class="token operator">+</span><span class="token operator">=</span> c<span class="token operator">-></span>size <span class="token operator">>></span> <span class="token number">1</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">/* c->size * 1.5 */</span>
-        <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
         <span class="token comment" spellcheck="true">/* allocate memory */</span>
         c<span class="token operator">-></span>stack <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">realloc</span><span class="token punctuation">(</span>c<span class="token operator">-></span>stack<span class="token punctuation">,</span> c<span class="token operator">-></span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">/* returns the memory address of the top of the stack */</span>
     ret <span class="token operator">=</span> c<span class="token operator">-></span>stack <span class="token operator">+</span> c<span class="token operator">-></span>top<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* update the top of the stack */</span>
     c<span class="token operator">-></span>top <span class="token operator">+</span><span class="token operator">=</span> size<span class="token punctuation">;</span>
     <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
 <span class="token comment" spellcheck="true">/* pop characters from the stack */</span>
-<span class="token keyword">static</span> <span class="token keyword">void</span><span class="token operator">*</span> <span class="token function">lept_context_pop</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> size_t size<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">static</span> <span class="token keyword">void</span><span class="token operator">*</span> <span class="token function">lept_context_pop</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> size_t size<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>c<span class="token operator">-></span>top <span class="token operator">>=</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* returns the memory address of the pop-up value and update the top of the stack */</span>
     <span class="token keyword">return</span> c<span class="token operator">-></span>stack <span class="token operator">+</span> <span class="token punctuation">(</span>c<span class="token operator">-></span>top <span class="token operator">-</span><span class="token operator">=</span> size<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>实现以后为了简化代码，我们将压入单个字符与整块字符抽象为两个宏定义：</p>
-<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> PUTC(c, ch) do &amp;#123; *(char*)lept_context_push(c, sizeof(char)) = (ch); &amp;#125; while(0)</span>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> PUTC(c, ch) do { *(char*)lept_context_push(c, sizeof(char)) = (ch); } while(0)</span>
 <span class="token macro property">#<span class="token directive keyword">define</span> PUTS(c, s, len) memcpy(lept_context_push(c, len), s, len)</span>
 </code></pre>
 <p>接下来我们来看一下<code>lept_parse_string_raw()</code>的实现：</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">lept_parse_string_raw</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">*</span> str<span class="token punctuation">,</span> size_t<span class="token operator">*</span> len<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">int</span> <span class="token function">lept_parse_string_raw</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">*</span> str<span class="token punctuation">,</span> size_t<span class="token operator">*</span> len<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">/* ··· */</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token punctuation">;</span><span class="token punctuation">;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token comment" spellcheck="true">/* ··· */</span>
         <span class="token keyword">case</span> <span class="token string">'\\'</span><span class="token punctuation">:</span>
-            <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token operator">*</span>p<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">/* ··· */</span>
                 <span class="token keyword">case</span> <span class="token string">'u'</span><span class="token punctuation">:</span>
                     <span class="token comment" spellcheck="true">/* validate the 4 hexadecimal digits */</span>
                     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>p <span class="token operator">=</span> <span class="token function">lept_parse_hex4</span><span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token operator">&amp;</span>u<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
                     <span class="token function">STRING_ERROR</span><span class="token punctuation">(</span>LEPT_PARSE_INVALID_UNICODE_HEX<span class="token punctuation">)</span><span class="token punctuation">;</span>
                     <span class="token comment" spellcheck="true">/* check the high surrogate */</span>
-                    <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">>=</span> <span class="token number">0xD800</span> <span class="token operator">&amp;&amp;</span> u <span class="token operator">&lt;=</span> <span class="token number">0xDBFF</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">>=</span> <span class="token number">0xD800</span> <span class="token operator">&amp;&amp;</span> u <span class="token operator">&lt;=</span> <span class="token number">0xDBFF</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                         <span class="token comment" spellcheck="true">/* validate the low surrogate */</span>
-                        <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'\\'</span> <span class="token operator">&amp;&amp;</span> p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'u'</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+                        <span class="token keyword">if</span> <span class="token punctuation">(</span>p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'\\'</span> <span class="token operator">&amp;&amp;</span> p<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'u'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                             <span class="token comment" spellcheck="true">/* skip '\u' */</span>
                             p <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
                             <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>p <span class="token operator">=</span> <span class="token function">lept_parse_hex4</span><span class="token punctuation">(</span>p<span class="token punctuation">,</span> <span class="token operator">&amp;</span>u2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
@@ -600,15 +600,15 @@ different times Anonymous unions are a C11 extension. */</span>
                               <span class="token comment" spellcheck="true">/* calculate the code point */</span>
                               <span class="token comment" spellcheck="true">/* codepoint = 0x10000 + (H − 0xD800) × 0x400 + (L − 0xDC00) */</span>
                                u <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">(</span>u <span class="token operator">-</span> <span class="token number">0xD800</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">|</span> <span class="token punctuation">(</span>u2 <span class="token operator">-</span> <span class="token number">0xDC00</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">0x10000</span><span class="token punctuation">;</span>
-                         	<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+                         	<span class="token punctuation">}</span>
                            <span class="token keyword">else</span>
                               <span class="token function">STRING_ERROR</span><span class="token punctuation">(</span>LEPT_PARSE_INVALID_UNICODE_SURROGATE<span class="token punctuation">)</span><span class="token punctuation">;</span>
-                    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
                     <span class="token comment" spellcheck="true">/* encode the code point as utf8 */</span>
                     <span class="token function">lept_encode_utf8</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
                     <span class="token keyword">break</span><span class="token punctuation">;</span>
                     <span class="token comment" spellcheck="true">/* ··· */</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
          <span class="token keyword">case</span> <span class="token string">'\0'</span><span class="token punctuation">:</span>
             <span class="token function">STRING_ERROR</span><span class="token punctuation">(</span>LEPT_PARSE_MISS_QUOTATION_MARK<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -619,7 +619,7 @@ different times Anonymous unions are a C11 extension. */</span>
                <span class="token comment" spellcheck="true">/* push the character to the stack */</span>
             <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> ch<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* ··· */</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>其中最主要的即是关于转义字符及转义序列的处理，此处我们提取函数<code>lept_parse_hex4()</code>解析4位16进制数，对于基本多文种平面（<code>basic multilingual plane, BMP</code>）以外的字符，<code>JSON</code>会使用代理对（<code>surrogate pair</code>）表示 <code>\uXXXX\uYYYY</code>。在<code>BMP</code>中，保留了2048个代理码点。如果第一个码点是<code>U+D800</code>至<code>U+DBFF</code>，我们便知道它的代码对的高代理项（<code>high surrogate</code>），之后应该伴随一个 U+DC00 至 U+DFFF 的低代理项（<code>low surrogate</code>）。然后，我们用下列公式把代理对 (H, L) 变换成真实的码点：</p>
 <pre class=" language-text"><code class="language-text">codepoint = 0x10000 + (H − 0xD800) × 0x400 + (L − 0xDC00)
@@ -673,31 +673,31 @@ different times Anonymous unions are a C11 extension. */</span>
 </tr>
 </tbody></table>
 <p>函数实现也很简单，只需要做相应的位操作就行。</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">lept_encode_utf8</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> u<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">lept_encode_utf8</span><span class="token punctuation">(</span>lept_context<span class="token operator">*</span> c<span class="token punctuation">,</span> <span class="token keyword">unsigned</span> u<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token comment" spellcheck="true">/* 1 byte */</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">&lt;=</span> <span class="token number">0x7F</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">&lt;=</span> <span class="token number">0x7F</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> u <span class="token operator">&amp;</span> <span class="token number">0xFF</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">/* 2 bytes */</span>
-    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">&lt;=</span> <span class="token number">0x7FF</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">&lt;=</span> <span class="token number">0x7FF</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0xC0</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>u <span class="token operator">>></span> <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0xFF</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0x80</span> <span class="token operator">|</span> <span class="token punctuation">(</span> u       <span class="token operator">&amp;</span> <span class="token number">0x3F</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">/* 3 bytes */</span>
-    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">&lt;=</span> <span class="token number">0xFFFF</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>u <span class="token operator">&lt;=</span> <span class="token number">0xFFFF</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0xE0</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>u <span class="token operator">>></span> <span class="token number">12</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0xFF</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0x80</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>u <span class="token operator">>></span>  <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0x3F</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0x80</span> <span class="token operator">|</span> <span class="token punctuation">(</span> u        <span class="token operator">&amp;</span> <span class="token number">0x3F</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     <span class="token comment" spellcheck="true">/* 4 bytes */</span>
-    <span class="token keyword">else</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token punctuation">{</span>
         <span class="token function">assert</span><span class="token punctuation">(</span>u <span class="token operator">&lt;=</span> <span class="token number">0x10FFFF</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0xF0</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>u <span class="token operator">>></span> <span class="token number">18</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0xFF</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0x80</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>u <span class="token operator">>></span> <span class="token number">12</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0x3F</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0x80</span> <span class="token operator">|</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>u <span class="token operator">>></span>  <span class="token number">6</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span> <span class="token number">0x3F</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">PUTC</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token number">0x80</span> <span class="token operator">|</span> <span class="token punctuation">(</span> u        <span class="token operator">&amp;</span> <span class="token number">0x3F</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>至此，有关于字符串的解析工作就已经全部完成。对于数组（<code>array</code>）和对象（<code>object</code>）的解析工作与字符串解析相差不大，需要注意的是在这两种数据类型的解析中我们会采用递归下降解析器（<code>recursive descent parser</code>）进行处理。在数组解析中我们采用<code>leptvalue e</code>创建一个临时变量来存储解析值，并在解析成功后将其压入栈中：</p>
 <pre class=" language-c"><code class="language-c"><span class="token function">memcpy</span><span class="token punctuation">(</span><span class="token function">lept_context_push</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">&amp;</span>e<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -715,19 +715,19 @@ different times Anonymous unions are a C11 extension. */</span>
 <span class="token comment" spellcheck="true">/* free the key */</span>
 <span class="token function">free</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">/* pop and free the members on the stack */</span>
-<span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     lept_member<span class="token operator">*</span> mf <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>lept_member<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">lept_context_pop</span><span class="token punctuation">(</span>c<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_member<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">free</span><span class="token punctuation">(</span>mf<span class="token operator">-></span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">lept_free</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>mf<span class="token operator">-></span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 v<span class="token operator">-></span>type <span class="token operator">=</span> LEPT_NULL<span class="token punctuation">;</span>
 </code></pre>
 <p>同样，在完成整个<code>JSON</code>解析过程后，我们需要对手动<code>malloc</code>的内存空间进行释放，我们实现一个<code>lept_free()</code>函数，同样是采用分类+递归的方法进行内存释放。</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lept_free</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lept_free</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> v<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>v <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     size_t i<span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* free the memory */</span>
-    <span class="token keyword">switch</span> <span class="token punctuation">(</span>v<span class="token operator">-></span>type<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>v<span class="token operator">-></span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">case</span> LEPT_STRING<span class="token punctuation">:</span>
             <span class="token function">free</span><span class="token punctuation">(</span>v<span class="token operator">-></span>s<span class="token punctuation">.</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
@@ -740,20 +740,20 @@ v<span class="token operator">-></span>type <span class="token operator">=</span
             <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token keyword">case</span> LEPT_OBJECT<span class="token punctuation">:</span>
             <span class="token comment" spellcheck="true">/* free the memory of each member */</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> v<span class="token operator">-></span>o<span class="token punctuation">.</span>size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> v<span class="token operator">-></span>o<span class="token punctuation">.</span>size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token function">free</span><span class="token punctuation">(</span>v<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token function">lept_free</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>v<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
             <span class="token comment" spellcheck="true">/* free the memory of the object */</span>
             <span class="token function">free</span><span class="token punctuation">(</span>v<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
         <span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token keyword">break</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
     v<span class="token operator">-></span>type <span class="token operator">=</span> LEPT_NULL<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>整个解析流程的主要步骤就是以上这些。对于提供给外部访问的API函数，我们同样分别加以实现，此处对于简单的获取类型（或值），设置类型等函数不在详述，主要分析一下有关于赋值操作的三个函数<code>lept_move()</code>、<code>lept_swap()</code>、<code>lept_copy()</code>。对于移动赋值和交换赋值来讲，实现的步骤也很简单，直接看代码：</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lept_move</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> dst<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lept_move</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> dst<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>src <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> dst <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> src <span class="token operator">!=</span> dst<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* free the memory of dst */</span>
     <span class="token function">lept_free</span><span class="token punctuation">(</span>dst<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -761,25 +761,25 @@ v<span class="token operator">-></span>type <span class="token operator">=</span
     <span class="token function">memcpy</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* reset the type of src to null */</span>
     <span class="token function">lept_init</span><span class="token punctuation">(</span>src<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 
-<span class="token keyword">void</span> <span class="token function">lept_swap</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> lhs<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> rhs<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">lept_swap</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> lhs<span class="token punctuation">,</span> lept_value<span class="token operator">*</span> rhs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>lhs <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> rhs <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* swap the memory of lhs and rhs by using a temporary variable */</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>lhs <span class="token operator">!=</span> rhs<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>lhs <span class="token operator">!=</span> rhs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         lept_value temp<span class="token punctuation">;</span>
         <span class="token function">memcpy</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>temp<span class="token punctuation">,</span> lhs<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">memcpy</span><span class="token punctuation">(</span>lhs<span class="token punctuation">,</span>   rhs<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token function">memcpy</span><span class="token punctuation">(</span>rhs<span class="token punctuation">,</span> <span class="token operator">&amp;</span>temp<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>而对于拷贝赋值操作来说，我们需要考虑其他因素，因此，我们采用与<code>lept_free()</code>相同操作（分类+递归）进行实现：</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lept_copy</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> dst<span class="token punctuation">,</span> <span class="token keyword">const</span> lept_value<span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">lept_copy</span><span class="token punctuation">(</span>lept_value<span class="token operator">*</span> dst<span class="token punctuation">,</span> <span class="token keyword">const</span> lept_value<span class="token operator">*</span> src<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     size_t i<span class="token punctuation">;</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>src <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> dst <span class="token operator">!=</span> <span class="token constant">NULL</span> <span class="token operator">&amp;&amp;</span> src <span class="token operator">!=</span> dst<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* copy to dst according to different types */</span>
-    <span class="token keyword">switch</span> <span class="token punctuation">(</span>src<span class="token operator">-></span>type<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>src<span class="token operator">-></span>type<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">case</span> LEPT_STRING<span class="token punctuation">:</span>
             <span class="token function">lept_set_string</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src<span class="token operator">-></span>s<span class="token punctuation">.</span>s<span class="token punctuation">,</span> src<span class="token operator">-></span>s<span class="token punctuation">.</span>len<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
@@ -799,12 +799,12 @@ v<span class="token operator">-></span>type <span class="token operator">=</span
             dst<span class="token operator">-></span>o<span class="token punctuation">.</span>m <span class="token operator">=</span> <span class="token punctuation">(</span>lept_member<span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_member<span class="token punctuation">)</span> <span class="token operator">*</span> src<span class="token operator">-></span>o<span class="token punctuation">.</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token function">lept_reserve_object</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src<span class="token operator">-></span>o<span class="token punctuation">.</span>size<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment" spellcheck="true">/* copy the members */</span>
-            <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> src<span class="token operator">-></span>o<span class="token punctuation">.</span>size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> src<span class="token operator">-></span>o<span class="token punctuation">.</span>size<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
                 <span class="token comment" spellcheck="true">/* copy the key */</span>
                 <span class="token function">lept_set_string</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>dst<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>k<span class="token punctuation">,</span> src<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>k<span class="token punctuation">,</span> src<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>klen<span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token comment" spellcheck="true">/* copy the value */</span>
                 <span class="token function">lept_copy</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>dst<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>v<span class="token punctuation">,</span> <span class="token operator">&amp;</span>src<span class="token operator">-></span>o<span class="token punctuation">.</span>m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
             <span class="token comment" spellcheck="true">/* update the size of dst */</span>
             dst<span class="token operator">-></span>o<span class="token punctuation">.</span>size <span class="token operator">=</span> src<span class="token operator">-></span>o<span class="token punctuation">.</span>size<span class="token punctuation">;</span>
             <span class="token keyword">break</span><span class="token punctuation">;</span>
@@ -813,13 +813,13 @@ v<span class="token operator">-></span>type <span class="token operator">=</span
             <span class="token function">lept_free</span><span class="token punctuation">(</span>dst<span class="token punctuation">)</span><span class="token punctuation">;</span>
             <span class="token comment" spellcheck="true">/* copy the value directly */</span>
             <span class="token function">memcpy</span><span class="token punctuation">(</span>dst<span class="token punctuation">,</span> src<span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lept_value<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <p>对于其中涉及到的<code>lept_reserve_object()</code>与<code>lept_reserve_array()</code>函数，是为了方便增删元素而引进了容量<code>capacity</code>的概念，这两个函数即是对<code>capacity</code>进行扩增的操作。</p>
 <hr>
 <h2 id="四、生成"><a href="#四、生成" class="headerlink" title="四、生成"></a>四、生成</h2><p>在完成解析任务后，我们还需要对解析到的值转换为<code>JSON</code>文本的功能，与解析过程类似，采用<code>lept_stringify()</code>与<code>lept_stringify_value()</code>函数实现，将待转换的值存入缓冲区中，全部完成转换后返回缓冲区<code>c.stack</code>的内存地址。</p>
-<pre class=" language-c"><code class="language-c"><span class="token keyword">char</span><span class="token operator">*</span> <span class="token function">lept_stringify</span><span class="token punctuation">(</span><span class="token keyword">const</span> lept_value<span class="token operator">*</span> v<span class="token punctuation">,</span> size_t<span class="token operator">*</span> length<span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+<pre class=" language-c"><code class="language-c"><span class="token keyword">char</span><span class="token operator">*</span> <span class="token function">lept_stringify</span><span class="token punctuation">(</span><span class="token keyword">const</span> lept_value<span class="token operator">*</span> v<span class="token punctuation">,</span> size_t<span class="token operator">*</span> length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     lept_context c<span class="token punctuation">;</span>
     <span class="token function">assert</span><span class="token punctuation">(</span>v <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token comment" spellcheck="true">/* initialize lept_context */</span>
@@ -832,7 +832,7 @@ v<span class="token operator">-></span>type <span class="token operator">=</span
     <span class="token comment" spellcheck="true">/* add '\0' to the end of the string */</span>
     <span class="token function">PUTC</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>c<span class="token punctuation">,</span> <span class="token string">'\0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> c<span class="token punctuation">.</span>stack<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 <hr>
 <h2 id="五、测试"><a href="#五、测试" class="headerlink" title="五、测试"></a>五、测试</h2><p>跑通所有单元测试并解析<code>json</code>文件与文本生成，结果如下：</p>
@@ -870,7 +870,7 @@ v<span class="token operator">-></span>type <span class="token operator">=</span
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1685446098556"></script>
+    <script async src="/js/copy-codeblock.js?v=1685446376803"></script>
   
 
   
